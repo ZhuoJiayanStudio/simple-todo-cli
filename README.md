@@ -3,6 +3,8 @@
 A tiny command-line to-do list app written in Python. Tasks are stored locally
 in `tasks.json`, no external dependencies required.
 
+[中文简体](./README-zh.md)
+
 ## Requirements
 - Python 3.8+
 

@@ -29,12 +29,13 @@ def save_tasks(tasks):
 
 
 def add_task(description):
-    # NOTE: no validation yet on empty/whitespace-only descriptions.
-    # See open issue: "Add input validation to the add command".
     tasks = load_tasks()
-    tasks.append({"description": description, "done": False})
-    save_tasks(tasks)
-    print(f"Added task: {description}")
+    if description.strip():
+        tasks.append({"description": description.strip(), "done": False})
+        save_tasks(tasks)
+        print(f"Added task: {description}")
+    else:
+        print("Can't add whitespace blank task!")
 
 
 def list_tasks():
